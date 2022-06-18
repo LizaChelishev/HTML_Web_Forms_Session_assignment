@@ -1,6 +1,7 @@
-from sqlalchemy import Column, String,  BigInteger
+from sqlalchemy import Column, String, BigInteger
 
 from db_config import Base
+
 
 class Users(Base):
     __tablename__ = 'users'
@@ -18,7 +19,7 @@ class Users(Base):
         return obj_dict
 
     def __repr__(self):
-        return f'<User id={self.id} username={self.username} email={self.email }password={self.password}' \
+        return f'<User id={self.id} username={self.username} email={self.email}password={self.password}' \
                f' public id={self.public_id}>'
 
     def __str__(self):
